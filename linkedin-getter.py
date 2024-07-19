@@ -27,8 +27,8 @@ def argument_parser():
     argumentParser = argparse.ArgumentParser(
         description=""
     )
-    company_name = argumentParser.add_argument("--company-name", "-cn", required=True, type=str)
-    company_domain = argumentParser.add_argument("--company-domain", "-cd", required=False, type=str)
+    company_name = argumentParser.add_argument("--company-name", "-cn", required=True, type=str, help="The company name to search for")
+    company_domain = argumentParser.add_argument("--company-domain", "-cd", required=False, type=str, help="The company domain to search for")
     return argumentParser.parse_args()
 
 def verify_linkedin_url(name, json_data, domain=None):
